@@ -1,0 +1,30 @@
+.mySwiper {
+  width: 100%;
+  max-height: 90dvh;
+}
+.grid-btn{
+  display: flex;
+  gap: 4px;
+  background-color: rgb(26, 26, 26);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 2em;
+}
+.hero{
+  height: 25dvh;
+  margin-bottom: 20px;
+  width: 100%;
+  background: url('../assets/onelab-image-header.jpg');
+}
+.product-image:hover{
+height: 100%;
+}

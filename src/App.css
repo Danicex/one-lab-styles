@@ -1,0 +1,46 @@
+body.light {
+  background-color: whitesmoke;
+  color: #181818;
+}
+body.light li a{
+  color: #000000;
+}
+body.dark li a{
+  color: #ffffff;
+}
+body.dark input{
+  color: #ececec;
+}
+body.light input{
+color: #000000;
+}
+body.dark {
+  background-color: #000000;
+  color: #fff;
+}
+body.dark #trans-bg{
+  background-color: #292929;
+  color: #fff;
+}
+body.light #trans-bg{
+  background-color: #ffffff;
+  color: rgb(14, 14, 14);
+}
+body.dark #trans-bg2{
+  background-color: #222222;
+  color: #fff;
+}
+body.light #trans-bg2{
+  background-color: whitesmoke;
+  color: rgb(14, 14, 14);
+}
+
+.main-text{
+  background-color: aqua;
+}
+.globe-img{
+  width: 200px;
+}
+.span-txt{
+  color: rgb(129, 56, 197);
+}

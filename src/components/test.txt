@@ -1,0 +1,32 @@
+const fashionProducts = [
+    {
+      id: 1,
+      name: "Classic Denim Jacket",
+      image: "https://images.unsplash.com/photo-1617137984097-7c6a2a8ffb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      description: "A timeless denim jacket perfect for any season.",
+    },
+    {
+      id: 2,
+      name: "Slim Fit Chinos",
+      image: "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      description: "Versatile chinos that go well with any outfit.",
+    },
+    {
+      id: 3,
+      name: "Leather Chelsea Boots",
+      image: "https://images.unsplash.com/photo-1578763460786-2303537dfa5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      description: "Stylish and comfortable leather Chelsea boots.",
+    },
+    {
+      id: 4,
+      name: "Oversized Hoodie",
+      image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      description: "Soft and warm oversized hoodie for cozy days.",
+    },
+    {
+      id: 5,
+      name: "Vintage Graphic T-Shirt",
+      image: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      description: "Retro-inspired graphic t-shirt made from soft cotton.",
+    },
+  ];
