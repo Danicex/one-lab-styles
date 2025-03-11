@@ -2,7 +2,9 @@ import React, { useContext, useState } from 'react'
 import { AppContext } from './Context/GLobalContext'
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
 import {Link} from 'react-router-dom'
-import image from './assets/one-lab-landing-image.webp'
+import image from './assets/one-lab-landing-image.webp';
+import logo2 from './assets/onelab dark logo.png';
+
 import  logo from './assets/onelabfashion.png'
 import globe from './assets/onelab globe.png'
 import { FaInstagram } from "react-icons/fa6";
@@ -24,7 +26,11 @@ export default function LandingPage() {
       <header className="w-full px-6 pt-3">
         <div className="container mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold flex items-center">
-            <img src={logo} alt=""  className='w-10' /> <h2>onelab</h2>
+            {theme === 'dark'?
+            <img src={logo} alt=""  className='w-10' />:
+            <img src={logo2} alt=""  className='w-10' /> 
+            }
+             <h2>onelab</h2>
             </div>
           <nav className="hidden space-x-6 md:flex">
            
@@ -56,7 +62,7 @@ export default function LandingPage() {
             <p className="text-lg text-muted-foreground">
             Choose your style, fabric, and measurements—all from home. We’ll craft your outfit with precision in just one week.
             </p>
-            <p className='font-bold'>Let’s create something exceptional. Contact me today!</p>
+            <p className='font-bold'>Let’s create something exceptional. Contact us Now!</p>
             <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0">
               <button size="lg"><Link to={'/store'}>Order now</Link></button>
             </div>
@@ -168,7 +174,7 @@ export default function LandingPage() {
             </ul>
             <div>
             <img src={globe} alt="" className='globe-img'/>
-            <p className='capitalize'>we delever to the US, UK and any where in Africa</p>
+            <p className='capitalize'>we deliver to the US, UK and any where in Africa</p>
             </div>
           </div>
 

@@ -7,6 +7,8 @@ import ProductSlides from './components/ProductSlides'
 import MainPage from './components/MainPage'
 import { Route,Routes } from 'react-router-dom'
 import './components/Allstyles.css'
+import Measurment from './components/Measurment'
+import History from './components/History'
 
 function App() {
  
@@ -18,6 +20,8 @@ function App() {
         <Route path='/user_form' element={<UserDetails/>}/>
         <Route path='/store' element={<MainPage/>}/>
         <Route path='/slides' element={<ProductSlides/>}/>
+        <Route path='/measurement' element={<Measurment/>}/>
+        <Route path='/history' element={<History/>}/>
       </Routes>
     </AppProvider>
   )
