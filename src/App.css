@@ -1,6 +1,6 @@
 body.light {
   background-color: whitesmoke;
-  color: #181818;
+  color: #000000;
 }
 body.light li a{
   color: #000000;
@@ -8,18 +8,12 @@ body.light li a{
 body.dark li a{
   color: #ffffff;
 }
-body.dark input{
-  color: #ececec;
-}
-body.light input{
-color: #000000;
-}
 body.dark {
   background-color: #000000;
   color: #fff;
 }
 body.dark #trans-bg{
-  background-color: #292929;
+  background-color: #2e2e2e;
   color: #fff;
 }
 body.light #trans-bg{
@@ -27,7 +21,7 @@ body.light #trans-bg{
   color: rgb(14, 14, 14);
 }
 body.dark #trans-bg2{
-  background-color: #222222;
+background-color: black;
   color: #fff;
 }
 body.light #trans-bg2{
@@ -43,4 +37,7 @@ body.light #trans-bg2{
 }
 .span-txt{
   color: rgb(129, 56, 197);
+}
+.contain{
+  background-color: whitesmoke;
 }

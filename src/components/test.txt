@@ -1,3 +1,4 @@
+
 const fashionProducts = [
     {
       id: 1,

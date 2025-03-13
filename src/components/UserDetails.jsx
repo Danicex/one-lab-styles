@@ -3,8 +3,8 @@ import { AppContext } from '../Context/GLobalContext'
 import PaymentBtn from './Checkout';
 import { useLocation } from 'react-router-dom';
 
-export default function UserDetails({product_image, product_price, product_name, setActive}) {
-
+export default function UserDetails({setActive,  setActive1}) {
+  const [status, setStatus] = useState("");
   const { user, setUser } = useContext(AppContext);
   const [shirtInput, setShirtInput] = useState('');
   const [shirtM, setShirtM] = useState([]);
@@ -62,6 +62,53 @@ export default function UserDetails({product_image, product_price, product_name,
     }
   },[trouserInput])
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    //setoring user in localstorage
+    setUser(`
+      ${userData.email}
+      ${userData.name}
+      ${userData.phone}
+      ${userData.country}
+      ${userData.address}`);
+
+    localStorage.setItem('user', `
+      user information
+      ${userData.email}
+      ${userData.name}
+      ${userData.phone}
+      ${userData.country}
+      ${userData.address}`);
+
+    //form data  strings
+    const formData = {
+      userInfo: `user information
+      ${userData.email}
+      ${userData.name}
+      ${userData.phone}
+      ${userData.country}
+      ${userData.address}`,
+      shirtMesh: shirtM,
+      trouserMesh: trouserM,
+    };
+    console.log(formData);
+    //post the formdata to formspree
+    const response = await fetch("https://formspree.io/f/xeoaqdyk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setActive1(true);
+      setActive(false)
+      setStatus("Message sent successfully!");
+    } else {
+      setStatus("Error sending message. Please try again.");
+    }
+  };
   const renderSection = (title, fields) => (
     <div className="mb-6 shadow-sm ">
       <div className=" py-4 ">
@@ -89,18 +136,11 @@ export default function UserDetails({product_image, product_price, product_name,
     </div>
   )
 
-  const handlesave = () => {
-    if (userData && shirtM && trouserM) {
-      setUser(userData);
-      setActive(1);
-    }
-  }
   
   return (
     <div className='w-3/4 absolute top-0 z-10 left-0 right-0 m-auto max-sm:w-full py-5 px-5' id='trans-bg'>
       <p className='float-end' onClick={() => setActive(false)}>✖</p>
-      {x === 0 ? (
-  <form onSubmit={(e) => { e.preventDefault(); handlesave(); }}>
+  <form >
     <div className='section1'>
       {renderSection("User Information", [
         renderInputU("email", "Email", 'Email'),
@@ -149,22 +189,8 @@ export default function UserDetails({product_image, product_price, product_name,
       ></textarea>
     </div>
 
-    <button type="submit" className='mt-5'>Save</button>
+    <button onClick={handleSubmit} className='mt-5'>Save</button>
   </form>
-) : x === 1 ? (
-  <div className='payment-div flex flex-col gap-4'>
-    <img src={product_image} alt="" className='w-2/4 m-auto rounded-lg' />
-    <p>Pay {product_price} for {product_name}</p>
-    <PaymentBtn email={userData.email} amount={product_price} phone={userData.phone} name={product_name} />
-  </div>
-) : (
-  <div className='success-div'>
-    <p className='capitalize'>🎉 Payment successful 🎉</p>
-  </div>
-)}
-
-
-
     </div>
   )
 }

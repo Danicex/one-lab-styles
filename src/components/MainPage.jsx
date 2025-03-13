@@ -51,9 +51,9 @@ export default function MainPage() {
         
 {grid 
     ? 
-    <Grid /> 
-    : 
     <ProductSlides />
+    : 
+    <Grid /> 
 }
     <div>
     {

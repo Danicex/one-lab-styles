@@ -38,9 +38,10 @@ export default function Grid() {
   }
 
   return (
-    <div>
+    <div className=''>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6" style={{
+      display: active ? 'none' : 'grid',}}>
         {fashionProducts.map((product) => (
           <div key={product.id} className="rounded-lg shadow-lg cursor-pointer" id='trans-bg' onClick={()=>checkout(product.name, product.description, product.image, product.price)}>
             <img src={product.image} alt={product.name} className="product-image w-full h-60 object-cover rounded" />
@@ -56,7 +57,7 @@ export default function Grid() {
       )}
       {
         active && (
-          <UserDetails setActive={setActive}/>
+          <UserDetails setActive={setActive} setActive1={setActive1}/>
         )
       }
     </div>

@@ -4,7 +4,7 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
-  const [user, setUser] = useState(() => localStorage.getItem('user_data'));
+  const [user, setUser] = useState(() => localStorage.getItem('user'));
 
   
   useEffect(() => {

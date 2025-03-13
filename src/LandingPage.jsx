@@ -34,13 +34,13 @@ export default function LandingPage() {
             </div>
           <nav className="hidden space-x-6 md:flex">
            
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white">
+            <Link href="#" className=" " id='trans-bg2'>
               <FaInstagram size={20}/>
             </Link>
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white">
+            <Link href="#" className=" " id='trans-bg2'>
             <FaTiktok size={20}/>
             </Link>
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white">
+            <Link href="#" className="" id='trans-bg2'> 
             <MdOutlineMail size={20}/>
             </Link>
           </nav>
@@ -64,7 +64,11 @@ export default function LandingPage() {
             </p>
             <p className='font-bold'>Let’s create something exceptional. Contact us Now!</p>
             <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0">
-              <button size="lg"><Link to={'/store'}>Order now</Link></button>
+                <Link to={'/store'} className='text-white'>
+              <button size="lg">
+              Order now
+                </button>
+                </Link>
             </div>
           </div>
 
@@ -182,16 +186,16 @@ export default function LandingPage() {
       </section>
       {nav &&(
         <div id='trans-bg' className='p-5 absolute top-[10%] right-0 w-80 rounded-md flex flex-col lg:hidden md:hidden'>
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white flex gap-2 items-center">
+            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
             <p>Instagram</p>
               <FaInstagram size={20}/>
             </Link>
 
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white flex gap-2 items-center">
+            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
             <p>Tiktok</p>
             <FaTiktok size={20}/>
             </Link>
-            <Link href="#" className="text-foreground/80 hover:text-foreground  text-white flex gap-2 items-center">
+            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
             <p>Email</p>
             <MdOutlineMail size={20}/>
             </Link>

@@ -6,17 +6,18 @@ export default function Summary({name, price, image,  description, setActive1}) 
     const {user} = useContext(AppContext);
     const [selectedColor, setSelectedColor] = useState("black");
   return (
-   <div className="fixed inset-0 z-50 flex items-center justify-center " id='trans-bg'>
-      <div className="relative w-full max-w-2xl rounded-lg  p-6  border ">
+   <div className="fixed inset-0 z-50 flex items-center justify-center "  id='trans-bg2'>
+
+      <div className="relative w-full max-w-2xl rounded-lg  p-6 shadow-lg" id='trans-bg'>
         <button onClick={()=>setActive1(false)} className="absolute right-4 top-4  hover:text-gray-300">
 ✖
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
-            <div className="border border-zinc-700 aspect-square">
+            <div className="aspect-square">
               <img
-                src={image || "/placeholder.svg?height=300&width=300"}
+                src={image }
                 alt={name}
                 width={300}
                 height={300}

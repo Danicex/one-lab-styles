@@ -51,7 +51,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #2e2e2e;
+  background-color: rgb(129, 56, 197);
   color: #fff;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -63,7 +63,14 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+input{
+  border:  1px gray solid;
+  background: none;
+}
+textarea{
+  border:  1px gray solid;
+  background: none;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
