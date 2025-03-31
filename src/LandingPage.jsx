@@ -44,15 +44,15 @@ export default function LandingPage() {
             <MdOutlineMail size={20}/>
             </Link>
           </nav>
-          <button variant="outline" className="hidden md:inline-flex">
+          <button variant="outline" className="hidden md:inline-flex bg-[#8138c5]">
             Contact Us
           </button>
           <button variant="ghost" size="icon" className="md:hidden" onClick={()=>setNav(!nav)}>
-            
+            <CiMenuBurger size={19}/>
           </button>
         </div>
       </header>
-
+           
       {/* Three Column Section */}
       <section className="container mx-auto  md:py-20 max-md:px-4 py-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
@@ -65,7 +65,7 @@ export default function LandingPage() {
             <p className='font-bold'>Let’s create something exceptional. Contact us Now!</p>
             <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0">
                 <Link to={'/store'} className='text-white'>
-              <button size="lg">
+              <button size="lg  " className='bg-[#8138c5]'>
               Order now
                 </button>
                 </Link>
@@ -186,16 +186,16 @@ export default function LandingPage() {
       </section>
       {nav &&(
         <div id='trans-bg' className='p-5 absolute top-[10%] right-0 w-80 rounded-md flex flex-col lg:hidden md:hidden'>
-            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
+            <Link href="#" className=" text-white flex gap-2 items-center" >
             <p>Instagram</p>
               <FaInstagram size={20}/>
             </Link>
 
-            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
+            <Link href="#" className=" text-white flex gap-2 items-center" >
             <p>Tiktok</p>
             <FaTiktok size={20}/>
             </Link>
-            <Link href="#" className=" t id='trans-bg2'ext-white flex gap-2 items-center">
+            <Link href="#" className=" text-white flex gap-2 items-center">
             <p>Email</p>
             <MdOutlineMail size={20}/>
             </Link>

@@ -9,7 +9,7 @@ export default function PaymentBtn({ name, email, amount, phone }) {
         email: email,
         amount:  amount,
         currency: "USD",
-        callback_url: "https://your-redirect-url.com",
+        callback_url: "https://onelab-styles.onrender.com/store",
         metadata: {
           custom_fields: [
             {

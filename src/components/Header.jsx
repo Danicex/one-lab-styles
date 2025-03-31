@@ -18,7 +18,7 @@ export default function Header() {
                        <img src={logo} alt=""  className='w-10' /> <h2>onelab</h2>
                        </div>
 
-            <ul className='flex items-center gap-4 mt-3 font-bold capitalize'>
+            <ul className='flex items-center gap-4 mt-3 font-bold capitalize max-md:hidden'>
                 <li className='cursor-pointer'>{
                     theme == 'dark'?
                     <MdLightMode onClick={()=>setTheme('light')}/>:

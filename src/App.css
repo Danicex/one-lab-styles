@@ -21,12 +21,12 @@ body.light #trans-bg{
   color: rgb(14, 14, 14);
 }
 body.dark #trans-bg2{
-background-color: black;
-  color: #fff;
+background-color: rgb(255, 255, 255);
+  color: #0e0d0d;
 }
 body.light #trans-bg2{
-  background-color: whitesmoke;
-  color: rgb(14, 14, 14);
+  background-color: rgb(14, 14, 14);
+  color: rgb(255, 255, 255);
 }
 
 .main-text{

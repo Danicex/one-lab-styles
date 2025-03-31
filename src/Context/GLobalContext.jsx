@@ -3,7 +3,8 @@ import React, { useEffect, useContext, useState, createContext } from 'react';
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState('dark')
+  //const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const [user, setUser] = useState(() => localStorage.getItem('user'));
 
   

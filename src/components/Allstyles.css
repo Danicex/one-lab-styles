@@ -5,7 +5,6 @@
 .grid-btn{
   display: flex;
   gap: 4px;
-  background-color: rgb(26, 26, 26);
   padding: 10px;
   border-radius: 10px;
   width: 100px;
